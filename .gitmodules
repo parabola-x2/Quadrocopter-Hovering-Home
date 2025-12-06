@@ -1,0 +1,21 @@
+[submodule "Embedded"]
+	path = Embedded
+	url = git@github.com:parabola-x2/Quadrocopter_Embedded.git
+[submodule "Simulation"]
+	path = Simulation
+	url = git@github.com:parabola-x2/Quadrocopter_Simulation.git
+[submodule "Kernel_Patch"]
+	path = Kernel_Patch
+	url = git@github.com:parabola-x2/Quadrocopter_Kernel_Patch.git
+[submodule "VirtualReality"]
+	path = VirtualReality
+	url = git@github.com:parabola-x2/Quadrocopter_VirtualReality.git
+[submodule "Android"]
+	path = Android
+	url = git@github.com:parabola-x2/Quadrocopter_Android.git
+[submodule "WebProjectManagement"]
+	path = WebProjectManagement
+	url = git@github.com:parabola-x2/Quadrocopter_WebProjectManagement.git
+[submodule "Database"]
+	path = Database
+	url = git@github.com:parabola-x2/Quadrocopter_Database.git
