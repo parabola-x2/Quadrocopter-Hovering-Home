@@ -1,10 +1,10 @@
 # README Virtual Reality
 
-### Project to bring a Simulink-based quadrocopter model to Google Cardboard VR
-
 #### Repository **:** [https://github.com/parabola-x2/Quadrocopter\_VirtualReality](https://github.com/parabola-x2/Quadrocopter_VirtualReality)
 
 #### Description:
+
+Task is to bring a Simulink-based quadrocopter model to Google Cardboard VR
 
 A quadrocopter-model based on MATLAB/Simulink will be used to show the behaviour of a quadrocopter in a virtual reality environment. The control of the object will be the movement of the head.<br>
 
