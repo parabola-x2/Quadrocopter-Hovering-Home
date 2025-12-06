@@ -19,3 +19,6 @@
 [submodule "Database"]
 	path = Database
 	url = git@github.com:parabola-x2/Quadrocopter_Database.git
+[submodule "Oscilloscope"]
+	path = Oscilloscope
+	url = git@github.com:parabola-x2/Quadrocopter_Oscilloscope.git
