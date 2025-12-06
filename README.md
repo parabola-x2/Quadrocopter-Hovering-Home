@@ -56,13 +56,17 @@ timeline 2017
 {% endcolumn %}
 
 {% column %}
-<figure><img src=".gitbook/assets/QuadrocopterTeam.drawio.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/QuadrocopterTeam.png" alt=""><figcaption></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
-## Team Tasks
+## Team Tasks Technical
 
 <figure><img src=".gitbook/assets/team tasks quadrocopter.png" alt=""><figcaption></figcaption></figure>
+
+## Team Tasks Managing
+
+
 
 #### Repositories and Submodules
 
@@ -104,7 +108,7 @@ Methodology
 * The control team must generate the hovering model using the **MATLAB Real-Time Code Generator** to ensure real-time execution.
 * Verification of the software is performed through **Software-in-the-Loop (SiL) testing**, validating the correctness and stability of the hovering control system.
 
-#### Team Virtual Reality
+#### Team Android Application and Virtual Reality
 
 Main Task
 
@@ -117,6 +121,22 @@ Methodology
 * A dedicated Google Cardboard application will be developed using **Unreal Engine 4** and the **Google VR Plugin**.
 * The system can later be adapted for other VR platforms such as **Oculus Rift** or **HTC Vive**.
 * Communication between the smartphone, the **Simulink simulation**, and eventually the real quadcopter is established through **UDP protocols**.
+
+#### Team Web Application and Database Management
+
+1. **Web Application Team**
+   * Responsible for overseeing the overall progress of the project.
+   * Key tasks include:
+     * Monitoring project milestones and deliverables.
+     * Maintaining documentation.
+     * Defining and managing the team structure.
+     * Tracking progress and ensuring deadlines are met.
+     * Providing an easy-to-use, login-based website developed in **PHP** for project access and coordination.
+2. **Database Management Team**
+   * Handles all tasks related to data storage and retrieval.
+   * Responsibilities include:
+     * Collecting and organizing data in a **SQL database**.
+       * Developing SQL commands that can be executed from the **Android application** to control the quadcopter.
 
 ## Interfaces
 
