@@ -66,7 +66,7 @@ timeline 2017
 
 ## Team Tasks Managing
 
-
+<figure><img src=".gitbook/assets/team_management.png" alt=""><figcaption></figcaption></figure>
 
 #### Repositories and Submodules
 
@@ -74,15 +74,11 @@ Disclaimer: Software has been written by students of various batches under super
 
 The project is a combination of following respositores&#x20;
 
-<table data-view="cards"><thead><tr><th></th><th data-type="content-ref"></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>Embedded</td><td><a href="https://github.com/parabola-x2/Embedded">https://github.com/parabola-x2/Embedded</a></td><td><a href="https://images.unsplash.com/photo-1610812387871-806d3db9f5aa?crop=entropy&#x26;cs=srgb&#x26;fm=jpg&#x26;ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHwxfHxSYXNwYmVycnklMjBQSXxlbnwwfHx8fDE3NjUwMTk5NzF8MA&#x26;ixlib=rb-4.1.0&#x26;q=85">https://images.unsplash.com/photo-1610812387871-806d3db9f5aa?crop=entropy&#x26;cs=srgb&#x26;fm=jpg&#x26;ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHwxfHxSYXNwYmVycnklMjBQSXxlbnwwfHx8fDE3NjUwMTk5NzF8MA&#x26;ixlib=rb-4.1.0&#x26;q=85</a></td></tr><tr><td>Realtime Kernel</td><td><a href="https://github.com/parabola-x2/Kernel">https://github.com/parabola-x2/Kernel</a></td><td><a href="https://images.unsplash.com/photo-1629654291663-b91ad427698f?crop=entropy&#x26;cs=srgb&#x26;fm=jpg&#x26;ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHw1fHxMaW51eHxlbnwwfHx8fDE3NjUwMTk5ODB8MA&#x26;ixlib=rb-4.1.0&#x26;q=85">https://images.unsplash.com/photo-1629654291663-b91ad427698f?crop=entropy&#x26;cs=srgb&#x26;fm=jpg&#x26;ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHw1fHxMaW51eHxlbnwwfHx8fDE3NjUwMTk5ODB8MA&#x26;ixlib=rb-4.1.0&#x26;q=85</a></td></tr><tr><td>Matlab Control Simulation</td><td><a href="https://github.com/parabola-x2/Simulation">https://github.com/parabola-x2/Simulation</a></td><td><a href="https://images.unsplash.com/photo-1580642135909-a59e2b8805c6?crop=entropy&#x26;cs=srgb&#x26;fm=jpg&#x26;ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHw2fHxGbGlnaHQlMjBjb250cm9sfGVufDB8fHx8MTc2NTAyMDA2MXww&#x26;ixlib=rb-4.1.0&#x26;q=85">https://images.unsplash.com/photo-1580642135909-a59e2b8805c6?crop=entropy&#x26;cs=srgb&#x26;fm=jpg&#x26;ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHw2fHxGbGlnaHQlMjBjb250cm9sfGVufDB8fHx8MTc2NTAyMDA2MXww&#x26;ixlib=rb-4.1.0&#x26;q=85</a></td></tr><tr><td>Android Application</td><td><a href="https://github.com/parabola-x2/Android">https://github.com/parabola-x2/Android</a></td><td><a href="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?crop=entropy&#x26;cs=srgb&#x26;fm=jpg&#x26;ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHwxfHxhbmRyb2lkfGVufDB8fHx8MTc2NTAyMDEzNHww&#x26;ixlib=rb-4.1.0&#x26;q=85">https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?crop=entropy&#x26;cs=srgb&#x26;fm=jpg&#x26;ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHwxfHxhbmRyb2lkfGVufDB8fHx8MTc2NTAyMDEzNHww&#x26;ixlib=rb-4.1.0&#x26;q=85</a></td></tr><tr><td>Virtual Reality</td><td><a href="https://github.com/parabola-x2/VirtualReality">https://github.com/parabola-x2/VirtualReality</a></td><td><a href="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?crop=entropy&#x26;cs=srgb&#x26;fm=jpg&#x26;ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHwzfHxWaXJ0dWFsJTIwUmVhbGl0eXxlbnwwfHx8fDE3NjUwMjAxNTN8MA&#x26;ixlib=rb-4.1.0&#x26;q=85">https://images.unsplash.com/photo-1593508512255-86ab42a8e620?crop=entropy&#x26;cs=srgb&#x26;fm=jpg&#x26;ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHwzfHxWaXJ0dWFsJTIwUmVhbGl0eXxlbnwwfHx8fDE3NjUwMjAxNTN8MA&#x26;ixlib=rb-4.1.0&#x26;q=85</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th align="center"></th><th data-type="content-ref"></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td align="center">Embedded</td><td><a href="https://github.com/parabola-x2/Quadrocopter_Embedded">https://github.com/parabola-x2/Quadrocopter_Embedded</a></td><td><a href="https://images.unsplash.com/photo-1610812387871-806d3db9f5aa?crop=entropy&#x26;cs=srgb&#x26;fm=jpg&#x26;ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHwxfHxSYXNwYmVycnklMjBQSXxlbnwwfHx8fDE3NjUwMTk5NzF8MA&#x26;ixlib=rb-4.1.0&#x26;q=85">https://images.unsplash.com/photo-1610812387871-806d3db9f5aa?crop=entropy&#x26;cs=srgb&#x26;fm=jpg&#x26;ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHwxfHxSYXNwYmVycnklMjBQSXxlbnwwfHx8fDE3NjUwMTk5NzF8MA&#x26;ixlib=rb-4.1.0&#x26;q=85</a></td></tr><tr><td align="center">Realtime Kernel</td><td><a href="https://github.com/parabola-x2/Quadrocopter_Kernel_Patch">https://github.com/parabola-x2/Quadrocopter_Kernel_Patch</a></td><td><a href="https://images.unsplash.com/photo-1629654291663-b91ad427698f?crop=entropy&#x26;cs=srgb&#x26;fm=jpg&#x26;ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHw1fHxMaW51eHxlbnwwfHx8fDE3NjUwMTk5ODB8MA&#x26;ixlib=rb-4.1.0&#x26;q=85">https://images.unsplash.com/photo-1629654291663-b91ad427698f?crop=entropy&#x26;cs=srgb&#x26;fm=jpg&#x26;ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHw1fHxMaW51eHxlbnwwfHx8fDE3NjUwMTk5ODB8MA&#x26;ixlib=rb-4.1.0&#x26;q=85</a></td></tr><tr><td align="center">Matlab Control Simulation</td><td><a href="https://github.com/parabola-x2/Quadrocopter_Simulation">https://github.com/parabola-x2/Quadrocopter_Simulation</a></td><td><a href="https://images.unsplash.com/photo-1580642135909-a59e2b8805c6?crop=entropy&#x26;cs=srgb&#x26;fm=jpg&#x26;ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHw2fHxGbGlnaHQlMjBjb250cm9sfGVufDB8fHx8MTc2NTAyMDA2MXww&#x26;ixlib=rb-4.1.0&#x26;q=85">https://images.unsplash.com/photo-1580642135909-a59e2b8805c6?crop=entropy&#x26;cs=srgb&#x26;fm=jpg&#x26;ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHw2fHxGbGlnaHQlMjBjb250cm9sfGVufDB8fHx8MTc2NTAyMDA2MXww&#x26;ixlib=rb-4.1.0&#x26;q=85</a></td></tr><tr><td align="center">Android Application</td><td><a href="https://github.com/parabola-x2/Quadrocopter_Android">https://github.com/parabola-x2/Quadrocopter_Android</a></td><td><a href="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?crop=entropy&#x26;cs=srgb&#x26;fm=jpg&#x26;ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHwxfHxhbmRyb2lkfGVufDB8fHx8MTc2NTAyMDEzNHww&#x26;ixlib=rb-4.1.0&#x26;q=85">https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?crop=entropy&#x26;cs=srgb&#x26;fm=jpg&#x26;ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHwxfHxhbmRyb2lkfGVufDB8fHx8MTc2NTAyMDEzNHww&#x26;ixlib=rb-4.1.0&#x26;q=85</a></td></tr><tr><td align="center">Virtual Reality</td><td><a href="https://github.com/parabola-x2/Quadrocopter_VirtualReality">https://github.com/parabola-x2/Quadrocopter_VirtualReality</a></td><td><a href="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?crop=entropy&#x26;cs=srgb&#x26;fm=jpg&#x26;ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHwzfHxWaXJ0dWFsJTIwUmVhbGl0eXxlbnwwfHx8fDE3NjUwMjAxNTN8MA&#x26;ixlib=rb-4.1.0&#x26;q=85">https://images.unsplash.com/photo-1593508512255-86ab42a8e620?crop=entropy&#x26;cs=srgb&#x26;fm=jpg&#x26;ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHwzfHxWaXJ0dWFsJTIwUmVhbGl0eXxlbnwwfHx8fDE3NjUwMjAxNTN8MA&#x26;ixlib=rb-4.1.0&#x26;q=85</a></td></tr><tr><td align="center">Database</td><td><a href="https://github.com/parabola-x2/Quadrocopter_Database">https://github.com/parabola-x2/Quadrocopter_Database</a></td><td><a href="https://images.unsplash.com/photo-1529078155058-5d716f45d604?crop=entropy&#x26;cs=srgb&#x26;fm=jpg&#x26;ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHw2fHxEYXRhJTIwY29sbGVjdGlvbnxlbnwwfHx8fDE3NjUwMjc5NTJ8MA&#x26;ixlib=rb-4.1.0&#x26;q=85">https://images.unsplash.com/photo-1529078155058-5d716f45d604?crop=entropy&#x26;cs=srgb&#x26;fm=jpg&#x26;ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHw2fHxEYXRhJTIwY29sbGVjdGlvbnxlbnwwfHx8fDE3NjUwMjc5NTJ8MA&#x26;ixlib=rb-4.1.0&#x26;q=85</a></td></tr><tr><td align="center">Website</td><td><a href="https://github.com/parabola-x2/Quadrocopter_WebProjectManagement">https://github.com/parabola-x2/Quadrocopter_WebProjectManagement</a></td><td><a href="https://images.unsplash.com/photo-1573867639040-6dd25fa5f597?crop=entropy&#x26;cs=srgb&#x26;fm=jpg&#x26;ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHw4fHx3ZWJzaXRlfGVufDB8fHx8MTc2NTAyNzkyNHww&#x26;ixlib=rb-4.1.0&#x26;q=85">https://images.unsplash.com/photo-1573867639040-6dd25fa5f597?crop=entropy&#x26;cs=srgb&#x26;fm=jpg&#x26;ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHw4fHx3ZWJzaXRlfGVufDB8fHx8MTc2NTAyNzkyNHww&#x26;ixlib=rb-4.1.0&#x26;q=85</a></td></tr></tbody></table>
 
 #### TEAM Embedded Software&#x20;
 
-Main Task
-
 Develop a real-time Linux kernel named **Raspbian.img** and port it to the Raspberry Pi. Run the application software to read sensor values and control the quadrocopter
-
-Methodology
 
 * Before porting the Linux image (**kernel.img**) to the Raspberry Pi, a bootloader must be installed to load the kernel during the startup process.
 * Once the kernel is running, the embedded software team should be able to debug it using **GDB**. For this purpose, the kernel must be compiled with the **-ggdb3** option (debugging enabled).
@@ -94,11 +90,7 @@ Methodology
 
 #### TEAM Control Application
 
-Main Task
-
 Develop a MATLAB model that stabilizes the quadcopter during hovering, ensuring roll, pitch, and yaw angles remain at zero.
-
-Methodology
 
 * The core quadcopter MATLAB model incorporates static parameters such as **weight**, **arm length**, and **number of rotors**, which are essential for emulating quadcopter dynamics.
 * **Initial values** for angles, accelerations, and rotor speeds are provided as inputs to the model.
@@ -110,11 +102,7 @@ Methodology
 
 #### Team Android Application and Virtual Reality
 
-Main Task
-
 Visualize the quadcopter in **Google Cardboard VR** and enable flight control through head movements.
-
-Methodology
 
 * **Head movement signals** are transmitted via **UDP** to the quadcopter.
 * The virtual reality device used is an **Android smartphone** equipped with **Google Cardboard**.
@@ -156,12 +144,6 @@ To validate the embedded software without the physical plant (in this case, the 
 The MATLAB-based **Hovering@Home** model is actively running and integrates with the Virtual Reality system. In this setup, the quadcopter's position is controlled by head movements captured by the VR team. The target hovering position is always at coordinates (0, 0, 0) with an altitude of 1 meter.
 
 Any external disturbance—such as a physical push or wind—should trigger the quadcopter to autonomously return to its default position. To ensure this behavior, the VR team must develop a **verification software**. One of its key use cases involves altering the quadcopter’s (x, y, z) position and validating whether the system correctly recalculates and restores it to (0, 0, 0). These positional changes should be **visually represented in a 3D environment** for effective analysis.
-
-### Interface Between Control Application and Virtual Reality
-
-The MATLAB-based **Hovering@Home** model is actively running and integrates with the Virtual Reality system. In this setup, the quadcopter's position is controlled by head movements captured by the VR team. The target hovering position is always at coordinates **(0, 0, 0)** with an altitude of **1 meter**.
-
-Any external disturbance—such as a physical push or wind—should trigger the quadcopter to autonomously return to its default position. To ensure this behavior, the VR team must develop a **verification software**. One of its key use cases involves altering the quadcopter’s **(x, y, z)** position and validating whether the system correctly recalculates and restores it to **(0, 0, 0)**. These positional changes should be visually represented in a **3D environment** for effective analysis.
 
 ## Final Result
 
