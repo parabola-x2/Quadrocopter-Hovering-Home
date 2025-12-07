@@ -2,6 +2,60 @@
 
 #### Repository **:** [https://github.com/parabola-x2/Quadrocopter\_Simulation](https://github.com/parabola-x2/Quadrocopter_Simulation)
 
+<figure><img src="/broken/files/TmFQeQWyDKy1xqL529Qd" alt=""><figcaption></figcaption></figure>
+
+Create a simulation environment of a Quadrocopter in Matlab and validate the system on a real microcontroller like Raspberry Pi. Different state estimation filter coefficients for example, filter coefficients of Kalman Filters are to be tested during the simulation, so that their optimum value could be evaluated.&#x20;
+
+A simulink model ( see picture above ) is available for a quick start on the thesis. The\
+goal of the thesis is to simulate the hovering and landing skills of the Quadrocopter.&#x20;
+
+Further, the task is to generate source code from the simulink model, so that it can be ported to the real hardware.
+
+### 1. Development with Simulink
+
+Existing Helicopter model can simulate a Hovering at a particular point from ground if the axes coordinate is provided. The idea is implement a Path follower simulation. The new model could follow a given path (the path itself given as coordinates in time series). Copter follows linear path in between the coordinates.
+
+New development:
+
+* Path command: Previous Model has Step inputs for x,y,z and Altitude. This is replaced with inputs from Path.mat file which loads time series from work space.
+* Position Controller: Since the new model can change position dynamically, a controller is required to adjust the offset and errors. Implementation for Rotation error correction, Phi and Theta controllers (Here PD controllers are enough). Psi is considered as constant.
+
+### 2. Software in loop
+
+Simulink provides an option to generate C-code which is ANSI-C (C90 compliance – LCC compiler) which can be used to flash with Hardware. The software can also be tested with Simulink model itself by replacing the Simulink subsystem with help of generated code. This generated S functions are more compact with less run time compared to the Simulink blocks itself.
+
+How to generate c-code:
+
+* Right click over the subsystem (which has to be coded)
+* Select C/C++code
+* Select Generate s –function
+* Select the Path Model (parameter set- calibration)
+
+Expected error : If the required prerequisite not met. For example, IC.mat or Path\_model or Path\_xxx not loaded.
+
+### 3. GUI development with MATLAB
+
+The physical parameters of a helicopter are fixed during the run-time simulation. However, GUI is made available with help of which physical parameters can be changed and new Helicopter model can be visualized. With new physical parameters, Attitude controllers have to be fine-tuned. Current tuning of controllers are done with ‘Trial and Error method’ but there is also development opportunity to evaluate the poles and zeros of the whole system and estimate the Kp,KI and KD values with the changes in Physical parameters.
+
+How To:
+
+* MATLAB HomenewappGuide
+* Create a new GUI –if new GUI has to be developed from scratch
+* Open Existing GUI – changes to be done with existing GUI (if \*.fig and\*.m exist, then it can be edited with this option).
+
+### 4. Verification and Validation with Simulink
+
+With Simulink, there are opportunities to self-correct the implementations with Verification and Validation option. For example, the Simulink crosschecks the run-time configurations like solver and other parameters, evaluates the feasibility of it. Then it provides the alternate feasible solutions.
+
+How to :
+
+1. Analyisis tab in Simulink has Model Advisor Option
+2. Select a subsystem to be verified.
+3. Select the verification ‘by task’.
+4. Specific options can be selected (example MISRA, ISO 26262 etc.,)
+
+***
+
 **TEAM Control Application**
 
 Develop a MATLAB model that stabilizes the quadcopter during hovering, ensuring roll, pitch, and yaw angles remain at zero.
