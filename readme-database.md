@@ -5,9 +5,7 @@
 <figure><img src=".gitbook/assets/DB-foto.png" alt="" width="375"><figcaption></figcaption></figure>
 
 Quadrocopter Raspberry Pi 2016 Datenbank mit PythonMySQL\
-Universität Tübingen\
 Author: Jascha Petter\
-Dienstag 20.08.16
 
 Vorwort\
 Als Student der Universität Tübingen, in einem der Informatikstudiengänge, ist die Teilnahme an einem Programmierprojekt vorgesehen. Aus den vielen angebotenen Projekten habe ich mich für das Projekt „PiSense mit Quadrocopter“ entschieden. In diesem Projekt waren die Anpassung der Low Level Treiber, das Darstellen der Sensordaten in einer GUI, eine App zum steuern der Motoren des Quadrocopters, sowie die gemessen Daten in einer Datenbank abzulegen als Ziele gegeben. Die folgende Dokumentation soll das erstellen und Verwalten einer Datenbank, sowie das Empfangen der Daten per UDP beschreiben.
@@ -74,8 +72,8 @@ Notieren Sie sich das Root-Passwort, da es später noch gebraucht wird!
 
 Öffnen Sie nun Ihr Terminal und geben folgende Befehle ein:
 
-8. Wechseln Sie ins MySQL-Bin-Verzeichnis cd /usr/local/mysql/bin
-9. Neues Passwort setzen ./mysqladmin -u root -p password ''
+8. Wechseln Sie ins MySQL-Bin-Verzeichnis `cd /usr/local/mysql/bin`
+9. Neues Passwort setzen `./mysqladmin -u root -p password 'somePW'`
 
 Sie werden nun aufgefordert, Ihr zuvor notiertes Root-Passwort einzugeben. Terminal verlassen `exit`
 
@@ -83,8 +81,28 @@ Damit kehren Sie zurück.
 
 10. Nun erstellen wir einen neuen Benutzer und geben diesem die notwendigen Rechte.
 
-$ ./mysql -u root -p mysql > CREATE USER ’PiSense’@’%’ IDENTIFIED BY ’somePW’; mysql > GRANT ALL PRIVILEGES ON _._ TO ’PiSense’@’%’; Dies ist nun der neue Benutzer, mit dem gearbeitet wird Nun muss noch der MySQL-Server gestartet werden. Dies ist wie folgt möglich. $ cd /usr/local/mysql/support-files/ $ sudo ./mysql.server start 1.2 Datenbank Da wir nun einen Benutzer zum arbeiten habe, fehlt nur noch die Datenbank und eine Tabelle Zu erst muss ein neues Schema erstellt werden: $ cd /usr/local/mysql/bin $ ./mysql -u PiSense -p mysql > CREATE DATABASE ‘SenseData‘ COLLATE ’latin1\_swedish\_ci’; 2. Nun können Sie eine Tabelle anlegen: mysql > CREATE TABLE ‘SenseData‘.‘DATA‘ ( ‘PITIME‘ timestamp(2) PRIMARY KEY NOT NULL, ‘ACC\_X‘ double NOT NULL, ‘ACC\_Y‘ double NOT NULL, ‘ACC\_Z‘ double NOT NULL, ‘MAG\_X‘ double NOT NULL, ‘MAG\_Y‘ double NOT NULL, ‘MAG\_Z‘ double NOT NULL, ‘G\_ROLL‘ double NOT NULL, ‘G\_PITCH‘ double NOT NULL, ‘G\_YAW‘ double NOT NULL, ‘TEMP‘ double NOT NULL, ‘PRESS‘ double NOT NULL, ‘M1‘ double NOT NULL, ‘M2‘ double NOT NULL, ‘M3‘ double NOT NULL, ‘M4‘ double NOT NULL ) ENGINE=’InnoDB’ COLLATE ’latin1\_swedish\_ci’; Zu den jeweiligen Einträgen später mehr.&#x20;
+`
+$ ./mysql -u root -p mysql > CREATE USER ’PiSense’@’%’ IDENTIFIED BY ’somePW’;
+mysql > GRANT ALL PRIVILEGES ON _._ TO ’PiSense’@’%’; 
+`
+Dies ist nun der neue Benutzer, mit dem gearbeitet wird Nun muss noch der MySQL-Server gestartet werden. Dies ist wie folgt möglich. 
+`
+$ cd /usr/local/mysql/support-files/ 
+$ sudo ./mysql.server start 
+`
+Da wir nun einen Benutzer zum arbeiten habe, fehlt nur noch die Datenbank und eine Tabelle Zu erst muss ein neues Schema erstellt werden: 
+`
+$ cd /usr/local/mysql/bin 
+$ ./mysql -u PiSense -p mysql > CREATE DATABASE ‘SenseData‘ COLLATE ’latin1\_swedish\_ci’; 
+`
 
+Nun können Sie eine Tabelle anlegen: 
+`
+mysql > CREATE TABLE ‘SenseData‘.‘DATA‘ ( ‘PITIME‘ timestamp(2) PRIMARY KEY NOT NULL, ‘ACC\_X‘ double NOT NULL, ‘ACC\_Y‘ double NOT NULL, ‘ACC\_Z‘ double NOT NULL, ‘MAG\_X‘ double NOT NULL, ‘MAG\_Y‘ double NOT NULL, ‘MAG\_Z‘ double NOT NULL, ‘G\_ROLL‘ double NOT NULL, ‘G\_PITCH‘ double NOT NULL, ‘G\_YAW‘ double NOT NULL, ‘TEMP‘ double NOT NULL, ‘PRESS‘ double NOT NULL, ‘M1‘ double NOT NULL, ‘M2‘ double NOT NULL, ‘M3‘ double NOT NULL, ‘M4‘ double NOT NULL ) ENGINE=’InnoDB’ COLLATE ’latin1\_swedish\_ci’;
+`
+
+Zu den jeweiligen Einträgen später mehr.`
+`
 Jetzt ist die Datenbank vollständig erstellt und kann mit Daten gefüllt werden.
 
 ### Python
