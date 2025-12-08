@@ -48,7 +48,7 @@ timeline 2017
 
 ## **Submodules**
 
-Disclaimer: Software has been written by students of various batches under supervision of Prof. Friedrich and Lecturer M Sc. Vikas Agrawal.
+Disclaimer: Software has been written by students of various batches under supervision of Prof. Friedrich and Lecturer M Sc. Vikas Agrawal and open-sourced for further public development
 
 The project is a combination of following domains
 
