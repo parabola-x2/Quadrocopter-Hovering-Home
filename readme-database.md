@@ -10,7 +10,7 @@ Author: Jascha Petter\
 Dienstag 20.08.16
 
 Vorwort\
-Als Student der Universität Tübingen, in einem der Informatikstudiengänge, ist die Teilnahme an einem Programmierprojekt vorgesehen. Aus den vielen angebotenen Projekten habe ich mich für das Projekt „PiSense mit Quadrocopter“ entschieden. In diesem Projekt waren die Anpassung der Low Level Treiber, das Darstellen der Sensordaten in einer GUI, eine App zum steuern der Motoren des Quadrocopters, sowie die gemessen Daten in einer Datenbank abzulegen als Ziele gegeben. Die folgende Dokumentation soll das erstellen und Verwalten einer Datenbank, sowie das Empfangen der Daten per UPD beschreiben.
+Als Student der Universität Tübingen, in einem der Informatikstudiengänge, ist die Teilnahme an einem Programmierprojekt vorgesehen. Aus den vielen angebotenen Projekten habe ich mich für das Projekt „PiSense mit Quadrocopter“ entschieden. In diesem Projekt waren die Anpassung der Low Level Treiber, das Darstellen der Sensordaten in einer GUI, eine App zum steuern der Motoren des Quadrocopters, sowie die gemessen Daten in einer Datenbank abzulegen als Ziele gegeben. Die folgende Dokumentation soll das erstellen und Verwalten einer Datenbank, sowie das Empfangen der Daten per UDP beschreiben.
 
 Inhaltsverzeichnis\
 1.1 MySQL\
@@ -45,74 +45,61 @@ Abbildungsverzeichnis
 2.11 Importieren einer Tabelle\
 <br>
 
-
 ## MySQL Community Server Installation
 
 Um auf Ihrem System einen MySQL Server laufen zu lassen, benötigen Sie den **MySQL Community Server**.
 
 ## Schritte zur Installation
 
-1. **Download starten**  
-   Laden Sie den MySQL Community Server von der offiziellen MySQL Homepage herunter:  
+1. **Download starten**\
+   Laden Sie den MySQL Community Server von der offiziellen MySQL Homepage herunter:\
    [MySQL Community Server Download](http://dev.mysql.com/downloads/mysql/1)
-
-2. **Version auswählen**  
+2. **Version auswählen**\
    Wählen Sie die passende Version für Ihr Betriebssystem.
-
-3. **Kein Konto erforderlich**  
-   Sie müssen sich für den Download nicht anmelden oder ein Konto erstellen.  
+3. **Kein Konto erforderlich**\
+   Sie müssen sich für den Download nicht anmelden oder ein Konto erstellen.\
    Klicken Sie einfach auf **„No thanks, just start my download“**.
-
-4. **Installation**  
+4. **Installation**\
    Führen Sie die Installation durch.
-
-5. **Root-Passwort**  
+5. **Root-Passwort**\
    Nach der Installation wird Ihnen das Passwort für den **Root User** angezeigt.
 
-![](<.gitbook/assets/Database/RootPW.png>)
-
-Abbildung 1.1: Passwort Alert 
+![](.gitbook/assets/Database/RootPW.png)
 
 6. My SQL Root-Passwort ändern
 
 Notieren Sie sich das Root-Passwort, da es später noch gebraucht wird!
 
-7. Schritt 3: Neues Passwort vergeben
+7. Neues Passwort vergeben
 
 Öffnen Sie nun Ihr Terminal und geben folgende Befehle ein:
 
-8. Wechseln Sie ins MySQL-Bin-Verzeichnis
-cd /usr/local/mysql/bin
+8. Wechseln Sie ins MySQL-Bin-Verzeichnis cd /usr/local/mysql/bin
+9. Neues Passwort setzen ./mysqladmin -u root -p password ''
 
-9. Neues Passwort setzen
-./mysqladmin -u root -p password ''
-
-Sie werden nun aufgefordert, Ihr zuvor notiertes Root-Passwort einzugeben.
-Terminal verlassen
-
-exit
+Sie werden nun aufgefordert, Ihr zuvor notiertes Root-Passwort einzugeben. Terminal verlassen `exit`
 
 Damit kehren Sie zurück.
 
+10. Nun erstellen wir einen neuen Benutzer und geben diesem die notwendigen Rechte.
 
-Nun erstellen wir einen neuen Benutzer und geben diesem die notwendigen Rechte. 
+$ ./mysql -u root -p mysql > CREATE USER ’PiSense’@’%’ IDENTIFIED BY ’somePW’; mysql > GRANT ALL PRIVILEGES ON _._ TO ’PiSense’@’%’; Dies ist nun der neue Benutzer, mit dem gearbeitet wird Nun muss noch der MySQL-Server gestartet werden. Dies ist wie folgt möglich. $ cd /usr/local/mysql/support-files/ $ sudo ./mysql.server start 1.2 Datenbank Da wir nun einen Benutzer zum arbeiten habe, fehlt nur noch die Datenbank und eine Tabelle Zu erst muss ein neues Schema erstellt werden: $ cd /usr/local/mysql/bin $ ./mysql -u PiSense -p mysql > CREATE DATABASE ‘SenseData‘ COLLATE ’latin1\_swedish\_ci’; 2. Nun können Sie eine Tabelle anlegen: mysql > CREATE TABLE ‘SenseData‘.‘DATA‘ ( ‘PITIME‘ timestamp(2) PRIMARY KEY NOT NULL, ‘ACC\_X‘ double NOT NULL, ‘ACC\_Y‘ double NOT NULL, ‘ACC\_Z‘ double NOT NULL, ‘MAG\_X‘ double NOT NULL, ‘MAG\_Y‘ double NOT NULL, ‘MAG\_Z‘ double NOT NULL, ‘G\_ROLL‘ double NOT NULL, ‘G\_PITCH‘ double NOT NULL, ‘G\_YAW‘ double NOT NULL, ‘TEMP‘ double NOT NULL, ‘PRESS‘ double NOT NULL, ‘M1‘ double NOT NULL, ‘M2‘ double NOT NULL, ‘M3‘ double NOT NULL, ‘M4‘ double NOT NULL ) ENGINE=’InnoDB’ COLLATE ’latin1\_swedish\_ci’; Zu den jeweiligen Einträgen später mehr.&#x20;
 
-$ ./mysql -u root -p mysql > CREATE USER ’PiSense’@’%’ IDENTIFIED BY ’somePW’; mysql > GRANT ALL PRIVILEGES ON _._ TO ’PiSense’@’%’; Dies ist nun der neue Benutzer, mit dem gearbeitet wird Nun muss noch der MySQL-Server gestartet werden. Dies ist wie folgt möglich. $ cd /usr/local/mysql/support-files/ $ sudo ./mysql.server start 1.2 Datenbank Da wir nun einen Benutzer zum arbeiten habe, fehlt nur noch die Datenbank und eine Tabelle Zu erst muss ein neues Schema erstellt werden: $ cd /usr/local/mysql/bin $ ./mysql -u PiSense -p mysql > CREATE DATABASE ‘SenseData‘ COLLATE ’latin1\_swedish\_ci’; 2. Nun können Sie eine Tabelle anlegen: mysql > CREATE TABLE ‘SenseData‘.‘DATA‘ ( ‘PITIME‘ timestamp(2) PRIMARY KEY NOT NULL, ‘ACC\_X‘ double NOT NULL, ‘ACC\_Y‘ double NOT NULL, ‘ACC\_Z‘ double NOT NULL, ‘MAG\_X‘ double NOT NULL, ‘MAG\_Y‘ double NOT NULL, ‘MAG\_Z‘ double NOT NULL, ‘G\_ROLL‘ double NOT NULL, ‘G\_PITCH‘ double NOT NULL, ‘G\_YAW‘ double NOT NULL, ‘TEMP‘ double NOT NULL, ‘PRESS‘ double NOT NULL, ‘M1‘ double NOT NULL, ‘M2‘ double NOT NULL, ‘M3‘ double NOT NULL, ‘M4‘ double NOT NULL ) ENGINE=’InnoDB’ COLLATE ’latin1\_swedish\_ci’; Zu den jeweiligen Einträgen später mehr. Jetzt ist die Datenbank vollständig erstellt und kann mit Daten gefüllt werden.
+Jetzt ist die Datenbank vollständig erstellt und kann mit Daten gefüllt werden.
 
-
-1.3 Python
+### Python
 
 Um später Daten empfangen zu könne und diese in der Datenbank abzulegen benötigen Sie Python. Da es sich um eine Skriptsprache handelt, ist eine IDE nicht vonnöten. Sie können in Ihrem lieblings Editor ein Skript schreiben. In meinem Fall habe ich mich für Atom entschieden Laden Sie sich hierzu Python 2.7 von der Python Homepage herunter. https://www.python.org/downloads/2 Nach der Installation, können Sie überprüfen ob es sich um die richtige Version handelt mit: $ python --version
 
 Damit Sie MySQL unter Python verwenden können, benötigen Sie noch MySQL-Python. https://pypi.python.org/pypi/MySQL-python/3 Nun ist alles komplett und Sie können beginnen
 
-2. Anwendung
+### Anwendung
 
 Aufgabe des Python Skriptes ist es die Daten, welche vom Quadrocopter gemessen und per UDP versendet werden, entgegenzunehmen und in einer Datenbank abzulegen. Hierbei stellt das Skript eine Verbindung zu der Datenbank her und legt dort per INSERTs die empfangenen Daten ab
 
-2.1 Struktur der Datenbank
+#### Struktur der Datenbank
 
-![](<.gitbook/assets/Database/tblstr.png>)
+![](.gitbook/assets/Database/tblstr.png)
 
 Abbildung 2.1:
 
@@ -132,7 +119,7 @@ Struktur der Datenbank
 
 Hier ist ein beispielhafter Auszug der Datenbank zu sehen, er zeigt einen Ausschnitt aus der Demo.
 
-![](<.gitbook/assets/Database/bsptbl.png>)
+![](.gitbook/assets/Database/bsptbl.png)
 
 Abbildung 2.2: Daten der Demo
 
@@ -140,7 +127,7 @@ Abbildung 2.2: Daten der Demo
 
 Verbindung zur Datenbank Um auf die vorhin erstelle Datenbank zuzugreifen, muss eine Verbindung hergestellt werden. Hierzu wird der neue Benutzer PiSense benötigt, natürlich könnten man auch Root benutzen das ist aber nicht Sinn der Sache.
 
-![](<.gitbook/assets/Database/dbc.png>)
+![](.gitbook/assets/Database/dbc.png)
 
 Abbildung 2.3: Connector
 
@@ -148,7 +135,7 @@ Abbildung 2.3: Connector
 
 Damit das Skipt eine Message vom Quadrocopter empfangen kann, muss ein UDP Socket auf einem bestimmten Port Lauschen. Python stellt uns hierbei einen Receive-Funktion zur verfügung. Es muss nur die IP und der Port and einen Socket gebindet werden.
 
-![](<.gitbook/assets/Database/udpsock.png>)
+![](.gitbook/assets/Database/udpsock.png)
 
 Abbildung 2.4: UDP Socket
 
@@ -156,13 +143,13 @@ In diesem Fall lauschen wir auf dem Port 5000, benutzen IPv4 und natürlich UDP
 
 2.3.3 Empfangen und aufteilen der Daten
 
-![](<.gitbook/assets/Database/whilerec.png>)
+![](.gitbook/assets/Database/whilerec.png)
 
 Abbildung 2.5: Empfange der Message
 
 Es wird so lange gewartet bis eine Message ankommt, falls diese der String ÄFAFïst, wird das Skript beendet. Da die Daten in einem einzigen String ankommen, müssen sie herausgefiltert werden. Um dies zu erreichen wird der String bei jedem Zeilenumbruch getrennt. Nun müssen noch die Bezeichner abgeschnitten werden. Auch hier liefert uns Python einen Lösung mit. Es werden die vier ersten Zeichen verworfen.
 
-![](<.gitbook/assets/Database/trenn.png>)
+![](.gitbook/assets/Database/trenn.png)
 
 Abbildung 2.6: Trennen der Daten
 
@@ -170,7 +157,7 @@ Abbildung 2.6: Trennen der Daten
 
 Damit die empfangenen Date jetzt nicht verloren gehen, werden sie in die Datenbank geschrieben. Dies erfolgt über einen INSERT. Hierbei werden die Daten in ihre jeweiligen Spalten der Tabelle gespeichert. Am ende muss das Query noch commited werden, an die Datenbank.
 
-![](<.gitbook/assets/Database/query.png>)
+![](.gitbook/assets/Database/query.png)
 
 Abbildung 2.7: Query
 
@@ -196,25 +183,25 @@ Adminer wurde zum verwalten der Datenbank verwendet
 1. Navigieren sie Ihren Browser zu: localhost/adminer-4.2.5.php
 2. Melden Sie sich mit dem Benutzer für die Datenbank an:
 
-![](<.gitbook/assets/Database/login.png>)
+![](.gitbook/assets/Database/login.png)
 
 Abbildung 2.8: Anmelden in Adminer
 
 3\. Über das linke Menü könne Sie die Datenbank Verwalten.
 
-![](<.gitbook/assets/Database/adminer.png>)
+![](.gitbook/assets/Database/adminer.png)
 
 Abbildung 2.9: Adminer Übersicht
 
 4\. Unter SQL-Kommando können Sie eingene SQL Anfragen an die Datenbank stellen.
 
-![](<.gitbook/assets/Database/sql.png>)
+![](.gitbook/assets/Database/sql.png)
 
 Abbildung 2.10: SQL-Kommando
 
 5\. Die Importfunktion ermöglicht es Ihnen einen Dump der Datenbank zu Imporieren. Wählen sie dazu einfach eine sql Datei aus und klicken auf ausführen.
 
-![](<.gitbook/assets/Database/import.png>)
+![](.gitbook/assets/Database/import.png)
 
 Abbildung 2.11: Importieren einer Tabelle
 
@@ -225,8 +212,3 @@ Abbildung 2.11: Importieren einer Tabelle
 • Verwaltung der Datenbank über die Gui Verwaltungsmöglichkeit ohne eine externe Software benutzen zu müssen, sondern direkt in der GUI.
 
 • Erweitern der Datenbank Die von der Datenbank erfassten Messwerte um weiter ergänzen, z.B. durch Berechnung aus den aktuellen
-
-
-
-
-
