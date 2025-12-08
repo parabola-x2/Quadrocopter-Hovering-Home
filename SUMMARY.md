@@ -9,4 +9,4 @@
 * [README Web Development](readme-web-development.md)
 * [README Database](readme-database.md)
 * [README Visualization](readme-visualization.md)
-* [xx](xx.md)
+* [README Embedded Hardwar](xx.md)
