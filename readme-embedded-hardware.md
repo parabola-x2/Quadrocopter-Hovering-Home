@@ -27,7 +27,6 @@
 | 50 | Bürklin   |         | Distanzrollen aus Polyamid Typ Fastpoint 10 (10090BB0113.5, M 2,5, L 13,5, Ad 5,0, Id 2,7 mm)                                          | 18 H 5045       | 0,08 €         | 4,00 €      | https://www.buerklin.com/default.asp?event=ShowArtikel(18H5045)&context=subset:0;sel:P;search:Distanzh%C3%BChsen |
 | 50 | Bürklin   |         | Distanzrollen aus Polyamid Typ Fastpoint 10 (10090BB0110.0, M 2,5, L 10, Ad 5,0, Id 2,7 mm)                                            | 18 H 5044       | 0,07 €         | 3,50 €      | https://www.buerklin.com/default.asp?event=ShowArtikel(18H5044)&context=subset:0;sel:P;search:Distanzh%C3%BChsen&ch=74532 |
 | 1  | Bürklin   |         | Unterlegscheiben aus PA 6.6 DIN 125/ISO 7089 Typ 05., M2.5 (100 Stk.)                                                                  | 16 H 942        | 2,83 €         | 2,83 €      | https://www.buerklin.com/default.asp?event=ShowArtikel(16H942)&context=subset:0;sel:SE;search:unterlegschreiben&ch=10217 |
-
 |    |           |         | **Summe**                                                                 |                | **1.523,62 €** |             |      |
 |    |           |         | **Price per Kit**                                                          |                | **304,72 €**   |             |      |
 
